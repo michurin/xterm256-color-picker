@@ -1,0 +1,64 @@
+body {
+  background-color: #fff;
+  color: #000;
+  margin: 2em;
+}
+
+.float-left {
+  float: left;
+}
+
+div {
+  padding: 0;
+  margin: 0 2em 0 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.clean {
+  clear: both;
+}
+
+.pre {
+  white-space: pre;
+}
+
+table.pal {
+  border-spacing: 2px;
+  padding: 0px;
+}
+
+table.pal td {
+  width: 1em;
+  min-width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+
+#ex {
+  padding: 1em;
+}
+
+span {
+  text-decoration: underline;
+}
+
+* {
+  font-family: monospace;
+}
+
+#appendix-a {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#appendix-a td {
+  padding: 0.2em 1em;
+}

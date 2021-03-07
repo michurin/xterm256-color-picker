@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Online color picker for terminal 256 color palette. Examples for shell prompt, vim, term/xterm</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <!-- TODO og
+      <meta property="og:url" content="TODO" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="TODO" />
+      <meta property="og:description" content="TODO" />
+      <meta property="og:image" content="TODO/og-image.png" />
+    -->
+  </head>
+  <body>
+    <h1>Online color picker for 256 colors terminal</h1>
+    <div class="float-left">
+      <h2>global background</h2>
+      <table class="pal" id="gbg"></table>
+      <table class="pal" id="gbggs"></table>
+      <h2>text background</h2>
+      <table class="pal" id="bg"></table>
+      <table class="pal" id="bggs"></table>
+      <h2>text color</h2>
+      <table class="pal" id="fg"></table>
+      <table class="pal" id="fggs"></table>
+    </div>
+    <div class="float-left">
+      <h2>example</h2>
+      <table><tr><td id="ex" class="pre"># Examples
+
+## Just echo
+
+echo -e &quot;\033[38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>m TEXT \033[0m&quot;
+
+## Shell prompt
+
+export PS1='\[\033[38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>m\] \W \[\033[0m\] \$ '
+
+## Vimrc
+
+:highlight Normal ctermfg=<span class="fg-label">xx</span> ctermbg=<span class="bg-label">xx</span></td></tr></table>
+    </div>
+    <div class="clean pre">
+--
+Author: Alexey &lt;a.michurin@gmail.com&gt;
+Source: <a href="TODO">TODO</a>
+Any contribution, feedback, ideas are welcome
+    </div>
+    <h1>Appendix A: X11 color names</h1>
+    <table id="appendix-a">
+    </table>
+    <script src="main.js"></script>
+    <script src="colors.js"></script>
+    <script src="appendix_a.js"></script>
+  </body>
+</head>
