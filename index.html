@@ -26,20 +26,38 @@
       <table class="pal" id="fggs"></table>
     </div>
     <div class="float-left">
-      <h2>example</h2>
-      <table><tr><td id="ex" class="pre"># Examples
-
-## Just echo
+      <h2>usage examples</h2>
+      <table><tr><td id="ex" class="pre"><b>### Just echo</b>
 
 echo -e &quot;\033[38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>m TEXT \033[0m&quot;
 
-## Shell prompt
+<b>### Shell prompt</b>
 
 export PS1='\[\033[38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>m\] \W \[\033[0m\] \$ '
 
-## Vimrc
+<b>### Vimrc</b>
 
-:highlight Normal ctermfg=<span class="fg-label">xx</span> ctermbg=<span class="bg-label">xx</span></td></tr></table>
+:highlight Normal ctermfg=<span class="fg-label">xx</span> ctermbg=<span class="bg-label">xx</span>
+
+<b>### ls/grep/less/...</b>
+
+export LS_COLORS='di=38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>'
+# foreground only: LS_COLORS='di=38;5;<span class="fg-label">xx</span>'
+# background only: LS_COLORS='di=48;5;<span class="bg-label">xx</span>'
+ls --color=always /
+
+export GREP_COLORS='ms=38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>'
+grep --color=always root /etc/passwd
+
+export LESS_TERMCAP_md=$'\e''[38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>m'
+export LESS_TERMCAP_us=$'\e''[38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>m'
+man man
+
+This commands have a lot of options. Take a closer look at
+man grep
+man dircolors
+man termcap
+man terminfo</td></tr></table>
     </div>
     <div class="clean pre">
 --
