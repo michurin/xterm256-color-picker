@@ -2,6 +2,7 @@ body {
   background-color: #fff;
   color: #000;
   margin: 2em;
+  transition: 200ms linear;
 }
 
 .float-left {
@@ -16,10 +17,13 @@ div {
 a {
   color: inherit;
   text-decoration: none;
+  text-decoration-skip: spaces;
+  transition: text-shadow 200ms linear;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #000;
+  text-shadow: -1px -1px 0px #fff, -1px 0px 0px #fff, -1px 1px 0px #fff, 0px -1px 0px #fff, 0px 0px 0px #fff, 0px 1px 0px #fff, 1px -1px 0px #fff, 1px 0px 0px #fff, 1px 1px 0px #fff, -2px -2px 3px #fff, -2px 0px 3px #fff, -2px 2px 3px #fff, 0px -2px 3px #fff, 0px 0px 3px #fff, 0px 2px 3px #fff, 2px -2px 3px #fff, 2px 0px 3px #fff, 2px 2px 3px #fff;
 }
 
 .clean {
@@ -44,6 +48,7 @@ table.pal td {
 
 #ex {
   padding: 1em;
+  transition: 200ms linear;
 }
 
 span {
