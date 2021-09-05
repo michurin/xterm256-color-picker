@@ -33,7 +33,17 @@ echo -e &quot;\033[38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-la
 
 <b>### Shell prompt</b>
 
+<b>#### sh/bash</b>
+
 export PS1='\[\033[38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>m\] \W \[\033[0m\] \$ '
+# foreground only: export PS1='\[\033[38;5;<span class="fg-label">xx</span>m\] \W \[\033[0m\] \$ '
+# background only: export PS1='\[\033[48;5;<span class="bg-label">xx</span>m\] \W \[\033[0m\] \$ '
+
+<b>#### zsh</b>
+
+PROMPT='%F{<span class="fg-label">xx</span>}%K{<span class="bg-label">xx</span>} %~ %k%f %# '
+# foreground only: PROMPT='%F{<span class="fg-label">xx</span>} %~ %f %# '
+# background only: PROMPT='%K{<span class="bg-label">xx</span>} %~ %k %# '
 
 <b>### Vimrc</b>
 
@@ -54,15 +64,17 @@ export LESS_TERMCAP_us=$'\e''[38;5;<span class="fg-label">xx</span>;48;5;<span c
 man man
 
 All these commands have a lot of options. Take a closer look at
-man grep
-man dircolors
-man termcap
-man terminfo</td></tr></table>
+<a target="_blank" href="https://linux.die.net/man/1/grep">man grep ↗</a>
+<a target="_blank" href="https://linux.die.net/man/1/dircolors">man dircolors ↗</a>
+<a target="_blank" href="https://linux.die.net/man/5/termcap">man termcap ↗</a>
+<a target="_blank" href="https://linux.die.net/man/5/terminfo">man terminfo ↗</a>
+<a target="_blank" href="https://linux.die.net/man/1/bash">man bash ↗</a>
+<a target="_blank" href="https://linux.die.net/man/1/zshmisc">man zshmisc ↗</a></td></tr></table>
     </div>
     <div class="clean pre">
 --
 Author: Alexey &lt;a.michurin@gmail.com&gt;
-Source: <a href="https://github.com/michurin/xterm256-color-picker">https://github.com/michurin/xterm256-color-picker</a>
+Source: <a href="https://github.com/michurin/xterm256-color-picker">https://github.com/michurin/xterm256-color-picker ↗</a>
 Any contribution, feedback, ideas are welcome
     </div>
     <h1>Appendix A: X11 color names</h1>
