@@ -8,7 +8,7 @@
 
 - Online table of colors [https://jonasjacek.github.io/colors/](https://jonasjacek.github.io/colors/)
 - XOrg colors [https://github.com/freedesktop/xorg-rgb/blob/master/rgb.txt](https://github.com/freedesktop/xorg-rgb/blob/master/rgb.txt)
-- Vim colors [https://github.com/vim/vim/blob/master/runtime/rgb.txt](https://github.com/vim/vim/blob/master/runtime/rgb.txt)
+- Vim colors <https://github.com/vim/vim/blob/e30d10253f~/runtime/rgb.txt>
 
 ## Any contributions
 

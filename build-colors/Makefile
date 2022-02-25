@@ -5,4 +5,4 @@ rgb.txt:
 	# xorg colors
 	# curl -o rgb.txt 'https://raw.githubusercontent.com/freedesktop/xorg-rgb/master/rgb.txt'
 	# vim colors
-	curl -o rgb.txt 'https://raw.githubusercontent.com/vim/vim/master/runtime/rgb.txt'
+	curl -o rgb.txt 'https://raw.githubusercontent.com/vim/vim/e30d10253f~/runtime/rgb.txt'
