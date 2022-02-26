@@ -1,15 +1,15 @@
 # xterm256-color-picker
 
-## Try it online
-
-[right here](https://michurin.github.io/xterm256-color-picker/)
+## Try it online [right here](https://michurin.github.io/xterm256-color-picker/)
 
 ## Related resources
 
-- Online table of colors [https://jonasjacek.github.io/colors/](https://jonasjacek.github.io/colors/)
-- XOrg colors [https://github.com/freedesktop/xorg-rgb/blob/master/rgb.txt](https://github.com/freedesktop/xorg-rgb/blob/master/rgb.txt)
+- Online table of colors <https://jonasjacek.github.io/colors/>
+- XOrg colors <https://github.com/freedesktop/xorg-rgb/blob/master/rgb.txt>
 - Vim colors <https://github.com/vim/vim/blob/e30d10253f~/runtime/rgb.txt>
 
-## Any contributions
+## Contributors
 
-are welcome!
+- [@casr](https://github.com/casr): contrast ratio for text vs background
+
+Any contributions are welcome
