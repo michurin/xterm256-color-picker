@@ -26,21 +26,21 @@ function setupTable(t, tgs, f) {
 $(() => {
   var fgt = [0, 0, 0];
   var bgt = [255, 255, 255];
-  setupTable($('#gbg'), $('#gbggs'), ({ c, tc, a }) => {
+  setupTable($('#gbg'), $('#gbggs'), ({ c, a }) => {
     $('body').css({
       'background-color': c,
       'color': a
     });
   });
-  setupTable($('#bg'), $('#bggs'), ({ c, tc, ct }) => {
+  setupTable($('#bg'), $('#bggs'), ({ c, cid, ct }) => {
     $('#ex').css('background-color', c);
-    $('.bg-label').text(tc);
+    $('.bg-label').text(cid);
     bgt = ct;
     $('.contrast-ratio').text(contrastRatio(bgt, fgt).toFixed(1));
   });
-  setupTable($('#fg'), $('#fggs'), ({ c, tc, ct }) => {
+  setupTable($('#fg'), $('#fggs'), ({ c, cid, ct }) => {
     $('#ex').css('color', c);
-    $('.fg-label').text(tc);
+    $('.fg-label').text(cid);
     fgt = ct;
     $('.contrast-ratio').text(contrastRatio(bgt, fgt).toFixed(1));
   });
