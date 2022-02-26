@@ -22,10 +22,9 @@ function getIndexedColor(i) {
   }
   if (i < 232) {
     const clamp = i - 16;
-    const r = Math.floor(clamp / 36);
-    const rR = clamp % 36;
-    const g = Math.floor(rR / 6);
-    const b = rR % 6;
+    const r = Math.floor(clamp / 36) % 6;
+    const g = Math.floor(clamp / 6) % 6;
+    const b = clamp % 6;
     return [
       r ? r * 40 + 55 : 0,
       g ? g * 40 + 55 : 0,
