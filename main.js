@@ -1,7 +1,7 @@
 function cell(r, g, b, cid, f) {
   var c = 'rgb(' + r + ',' + g + ',' + b + ')';
   var a = r + g + b < 300 ? '#999' : '#000';
-  return $('<td>').css('background-color', c).prop('title', cid).click(() => f(c, cid, a));
+  return $('<td>').css('background-color', c).prop('title', cid).click(() => f({ c, cid, a, ct: [r, g, b] }));
 }
 
 function setupTable(t, tgs, f) {
@@ -24,20 +24,27 @@ function setupTable(t, tgs, f) {
 }
 
 $(() => {
-  setupTable($('#gbg'), $('#gbggs'), (c, tc, a) => {
+  var fgt = [0, 0, 0];
+  var bgt = [255, 255, 255];
+  setupTable($('#gbg'), $('#gbggs'), ({ c, tc, a }) => {
     $('body').css({
       'background-color': c,
       'color': a
     });
   });
-  setupTable($('#bg'), $('#bggs'), (c, tc) => {
+  setupTable($('#bg'), $('#bggs'), ({ c, tc, ct }) => {
     $('#ex').css('background-color', c);
     $('.bg-label').text(tc);
+    bgt = ct;
+    $('.contrast-ratio').text(contrastRatio(bgt, fgt).toFixed(1));
   });
-  setupTable($('#fg'), $('#fggs'), (c, tc) => {
+  setupTable($('#fg'), $('#fggs'), ({ c, tc, ct }) => {
     $('#ex').css('color', c);
     $('.fg-label').text(tc);
+    fgt = ct;
+    $('.contrast-ratio').text(contrastRatio(bgt, fgt).toFixed(1));
   });
   $('.fg-label').text(16);
   $('.bg-label').text(231);
+  $('.contrast-ratio').text(contrastRatio(bgt, fgt).toFixed(1));
 });
