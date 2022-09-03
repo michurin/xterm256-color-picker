@@ -1,7 +1,9 @@
 function cell(r, g, b, cid, f) {
-  var c = 'rgb(' + r + ',' + g + ',' + b + ')';
-  var a = r + g + b < 300 ? '#999' : '#000';
-  return $('<td>').css('background-color', c).prop('title', cid).click(() => f({ c, cid, a, ct: [r, g, b] }));
+  const c = `rgb(${r},${g},${b})`;
+  const a = r + g + b < 300 ? '#999' : '#000';
+  return $('<td>').css('background-color', c).prop('title', cid).click(() => f({
+    c, cid, a, ct: [r, g, b],
+  }));
 }
 
 function setupTable(t, f) {
@@ -15,12 +17,12 @@ function setupTable(t, f) {
 }
 
 $(() => {
-  var fgt = [0, 0, 0];
-  var bgt = [255, 255, 255];
+  let fgt = [0, 0, 0];
+  let bgt = [255, 255, 255];
   setupTable($('#gbg'), ({ c, a }) => {
     $('body').css({
       'background-color': c,
-      'color': a
+      color: a,
     });
   });
   setupTable($('#bg'), ({ c, cid, ct }) => {

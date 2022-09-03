@@ -1,15 +1,15 @@
 $(() => {
-  var table = $('#appendix-a');
+  const table = $('#appendix-a');
   RGB.forEach((p) => {
-    var c = p[0];
-    var n = p[1];
-    var fg = p[2] ? '#000' : '#fff';
+    const c = p[0];
+    const n = p[1];
+    const fg = p[2] ? '#000' : '#fff';
     table.append($('<tr>').append(
       $('<td>').text(c),
-      $('<td>').text(n)
+      $('<td>').text(n),
     ).css({
       backgroundColor: c,
-      color: fg
+      color: fg,
     }));
   });
 });

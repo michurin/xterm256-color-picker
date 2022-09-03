@@ -11,8 +11,8 @@ function relativeLuminance(rI, gI, bI) {
 }
 
 function contrastRatio(ct0, ct1) {
-  var lum0 = relativeLuminance(...ct0);
-  var lum1 = relativeLuminance(...ct1);
+  const lum0 = relativeLuminance(...ct0);
+  const lum1 = relativeLuminance(...ct1);
   return lum0 > lum1 ? ((lum0 + 0.05) / (lum1 + 0.05)) : ((lum1 + 0.05) / (lum0 + 0.05));
 }
 
