@@ -49,7 +49,7 @@ PROMPT='%F{<span class="fg-label">xx</span>}%K{<span class="bg-label">xx</span>}
 
 :highlight Normal ctermfg=<span class="fg-label">xx</span> ctermbg=<span class="bg-label">xx</span>
 
-<b>### ls/grep/less/...</b>
+<b>### ls/grep/less/tmux...</b>
 
 export LS_COLORS='di=38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>'
 # foreground only: LS_COLORS='di=38;5;<span class="fg-label">xx</span>'
@@ -63,8 +63,12 @@ export LESS_TERMCAP_md=$'\e''[38;5;<span class="fg-label">xx</span>;48;5;<span c
 export LESS_TERMCAP_us=$'\e''[38;5;<span class="fg-label">xx</span>;48;5;<span class="bg-label">xx</span>m'
 man man
 
+# tmux: ~/.tmux.conf line
+set -g status-style bg=colour<span class="bg-label">xx</span>,fg=colour<span class="fg-label">xx</span>
+
 All these commands have a lot of options. Take a closer look at
 <a target="_blank" href="https://linux.die.net/man/1/grep">man grep ↗</a>
+<a target="_blank" href="https://linux.die.net/man/1/tmux">man tmux ↗</a>
 <a target="_blank" href="https://linux.die.net/man/1/dircolors">man dircolors ↗</a>
 <a target="_blank" href="https://linux.die.net/man/5/termcap">man termcap ↗</a>
 <a target="_blank" href="https://linux.die.net/man/5/terminfo">man terminfo ↗</a>
