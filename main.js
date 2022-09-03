@@ -7,13 +7,29 @@ function cell(r, g, b, cid, f) {
 }
 
 function setupTable(t, f) {
-  for (var tr, i = 16; i < 256; i++) {
+  let tr;
+  let i;
+  for (i = 16; i < 232; i++) {
     if ((i - 16) % 36 === 0) {
       tr = $('<tr>');
       t.append(tr);
     }
     tr.append(cell(...getIndexedColor(i), i, f));
   }
+  // include all the greys for the ramp
+  let colors = [];
+  for (i = 16; i < 232; i += 43) {
+    colors.push([i, getIndexedColor(i)]);
+  }
+  for (i = 232; i < 256; i++) {
+    colors.push([i, getIndexedColor(i)]);
+  }
+  colors.sort((a, b) => b[1][0] - a[1][0]);
+  tr = $('<tr>');
+  colors.forEach(c => {
+    tr.append(cell(...c[1], c[0], f));
+  });
+  t.append(tr);
 }
 
 $(() => {
