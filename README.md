@@ -15,5 +15,7 @@
   - contrast ratio for text vs background
   - fix layout
   - fix color tables
+  - add CSS and vim GUI colors
+  - include more colors in the greyscale ramp
 
 Any contributions are welcome
