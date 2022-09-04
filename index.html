@@ -47,7 +47,17 @@ PROMPT='%F{<span class="fg-label">xx</span>}%K{<span class="bg-label">xx</span>}
 
 <b>### Vimrc</b>
 
-:highlight Normal ctermfg=<span class="fg-label">xx</span> ctermbg=<span class="bg-label">xx</span>
+:highlight Normal ctermfg=<span class="fg-label">xx</span> ctermbg=<span class="bg-label">xx</span> guifg=#<span class="fg-label-hex">xxxxxx</span> guibg=#<span class="bg-label-hex">xxxxxx</span>
+
+<b>### CSS</b>
+
+.class {
+  color: rgb(<span class="fg-label-rgb">x, x, x</span>);
+  background-color: rgb(<span class="bg-label-rgb">x, x, x</span>);
+
+  color: #<span class="fg-label-hex">xxxxxx</span>;
+  background-color: #<span class="bg-label-hex">xxxxxx</span>;
+}
 
 <b>### ls/grep/less/tmux...</b>
 

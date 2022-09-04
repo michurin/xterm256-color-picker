@@ -32,6 +32,13 @@ function setupTable(t, f) {
   t.append(tr);
 }
 
+function setColorByPrefix(prefix, idx) {
+  const c = getIndexedColor(idx);
+  $(`.${prefix}-label`).text(idx);
+  $(`.${prefix}-label-hex`).text(c.map(x => x.toString(16).padStart(2, '0')).join(''));
+  $(`.${prefix}-label-rgb`).text(c.join(', '));
+}
+
 $(() => {
   let fgt = [0, 0, 0];
   let bgt = [255, 255, 255];
@@ -43,17 +50,17 @@ $(() => {
   });
   setupTable($('#bg'), ({ c, cid, ct }) => {
     $('#ex').css('background-color', c);
-    $('.bg-label').text(cid);
+    setColorByPrefix('bg', cid);
     bgt = ct;
     $('.contrast-ratio').text(contrastRatio(bgt, fgt).toFixed(1));
   });
   setupTable($('#fg'), ({ c, cid, ct }) => {
     $('#ex').css('color', c);
-    $('.fg-label').text(cid);
+    setColorByPrefix('fg', cid);
     fgt = ct;
     $('.contrast-ratio').text(contrastRatio(bgt, fgt).toFixed(1));
   });
-  $('.fg-label').text(16);
-  $('.bg-label').text(231);
+  setColorByPrefix('fg', 16);
+  setColorByPrefix('bg', 231);
   $('.contrast-ratio').text(contrastRatio(bgt, fgt).toFixed(1));
 });
